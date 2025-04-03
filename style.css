@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ensure main content does not overlap with the sidebar */
+.cv-container, .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    padding-left: 120px; /* Adjust for sidebar */
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+    color: #fff;
+    font-weight: 600;
+}
+
+a {
+    color: #ff4c4c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ff4c4c;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e03e3e;
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 90px; /* Increased width for better spacing */
+    height: 100%;
+    background: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    z-index: 1000;
+}
+
+/* Sidebar icon spacing */
+.sidebar a {
+    color: #ff4c4c;
+    font-size: 28px;
+    margin: 25px 0; /* Increased margin to prevent overlapping */
+    transition: color 0.3s, transform 0.2s;
+}
+
+.sidebar a i {
+    display: block; /* Ensures icons are on their own line */
+    margin-bottom: 5px;
+}
+
+/* Sidebar hover effects */
+.sidebar a:hover {
+    color: #e03e3e;
+    transform: scale(1.1);
+}
+
+/* Active sidebar icon */
+.sidebar a.active {
+    color: white;
+}
+
+/* Profile Card */
+.profile-card {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.profile-card h2 {
+    color: #ff4c4c;
+    margin: 0;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #181818;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 45%;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #ff4c4c;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    color: #fff;
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #181818;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #ff4c4c;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e03e3e;
+    transform: scale(1.05);
+}
+
+/* Contact Page Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ff4c4c;
+    background: #222;
+    color: #fff;
+}
+
+#contact-form button {
+    background: #ff4c4c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background: #e03e3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv-container, .container {
+        padding-left: 100px;
+    }
+
+    .sidebar {
+        width: 70px; /* Reduce width on smaller screens */
+    }
+
+    .sidebar a {
+        font-size: 24px; /* Adjust icon size */
+        margin: 20px 0;
+    }
+}
